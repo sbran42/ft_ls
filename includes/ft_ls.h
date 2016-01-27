@@ -79,7 +79,7 @@ char				**ft_init_r(char **arg, DIR *dir);
 char				**ft_init_f(char *av, t_env *env);
 
 int					ft_print(char **ls, t_env *env);
-int					ft_print_l(int i, t_env *env);
+int					ft_print_l(t_env *env);
 void				ft_m(struct stat stats, t_env *env);
 
 void				ft_free_tab(char **arg);

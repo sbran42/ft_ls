@@ -49,7 +49,7 @@ void					ft_m(struct stat stats, t_env *env)
 					major(stats.st_rdev) : 0;
 }
 
-static void				ft_print_link(struct stat stats, int i, t_env *env)
+static void				ft_print_link(struct stat stats, t_env *env)
 {
 	struct tm			time_a;
 	struct group		*grp;
@@ -78,11 +78,11 @@ static void				ft_print_link(struct stat stats, int i, t_env *env)
 		ft_strsub(mtime, 0, 12), C_END);
 }
 
-int						ft_print_l(int i, t_env *env)
+int						ft_print_l(t_env *env)
 {
 	if (S_ISLNK(env->ls_lo.st_mode))
-		ft_print_link(env->ls_lo, i, env);
+		ft_print_link(env->ls_lo, env);
 	else
-		ft_print_link(env->ls_l, i, env);
+		ft_print_link(env->ls_l, env);
 	return (0);
 }

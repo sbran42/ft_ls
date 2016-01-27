@@ -103,7 +103,7 @@ int						ft_print(char **ls, t_env *env)
 		stat(ft_strdup(buf2), &(env->ls_l));
 		ft_m(env->ls_lo, env);
 		if (env->op_active.l == true)
-			if (ft_print_l(i, env) == -1)
+			if (ft_print_l(env) == -1)
 				return (-1);
 		ft_print_arg(ls[i], env);
 	}
